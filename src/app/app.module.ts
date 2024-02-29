@@ -34,7 +34,7 @@ import {
   MsalInterceptor,
 } from '@azure/msal-angular';
 
-const GRAPH_ENDPOINT = 'Enter_the_Graph_Endpoint_Herev1.0/me';
+const GRAPH_ENDPOINT = 'https://graph.microsoft.com/v1.0/me';
 
 const isIE =
   window.navigator.userAgent.indexOf('MSIE ') > -1 ||
@@ -47,9 +47,9 @@ export function loggerCallback(logLevel: LogLevel, message: string) {
 export function MSALInstanceFactory(): IPublicClientApplication {
   return new PublicClientApplication({
     auth: {
-      clientId: '43ebc43c-fbdd-4ed5-ab85-7e3d0658b4ca',
+      clientId: '40fffe2f-4286-4f3a-b9ca-45f9c8a699c8',
       authority: 'https://login.microsoftonline.com/5bc29b3a-acdf-4b00-a873-69c09bc3fbec/',
-      redirectUri: 'http://localhost:4200/',
+      redirectUri: 'https://localhost:4200/',
     },
     cache: {
       cacheLocation: BrowserCacheLocation.LocalStorage,
